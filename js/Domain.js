@@ -1,6 +1,8 @@
 /**
  * Created by Daniel Beckwith on 5/24/2015.
  */
+///<reference path="libs/d3/d3.d.ts"/>
+///<reference path="libs/underscore/underscore.d.ts"/>
 ///<reference path="Vector.ts"/>
 ///<reference path="Curve.ts"/>
 ///<reference path="Line.ts"/>
@@ -72,6 +74,8 @@ var Domain = (function () {
             throw new Error(f2 + ' already linked');
         this.pairs[f1] = this.pairs[f2] = new CurvePair(this.faces[f1], this.faces[f2], map, this.numPairs++);
         this.checked = false;
+    };
+    Domain.prototype.draw = function (svg) {
     };
     Domain.STRAIGHT = function (t) { return t; };
     Domain.REVERSED = function (t) { return 1 - t; };

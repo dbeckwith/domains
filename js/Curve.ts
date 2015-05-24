@@ -3,6 +3,7 @@
  */
 
 ///<reference path="libs/underscore/underscore.d.ts"/>
+///<reference path="libs/d3/d3.d.ts"/>
 ///<reference path="Vector.ts"/>
 
 interface Generator {
@@ -69,6 +70,10 @@ class Curve {
 
     genPts(forDraw:boolean):Vector[] {
         return _.map(_.range(0, 1, (forDraw ? Curve.DRAW_DELTA : Curve.CALC_DELTA) / this.length).concat([1]), this.gen);
+    }
+
+    draw(svg:D3.Selection) {
+
     }
 
 }

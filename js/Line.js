@@ -7,6 +7,7 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
+///<reference path="libs/d3/d3.d.ts"/>
 ///<reference path="Vector.ts"/>
 ///<reference path="Curve.ts"/>
 var Line = (function (_super) {
@@ -32,6 +33,8 @@ var Line = (function (_super) {
     });
     Line.prototype.genPts = function (forDraw) {
         return [this.start, this.end];
+    };
+    Line.prototype.draw = function (svg) {
     };
     return Line;
 })(Curve);

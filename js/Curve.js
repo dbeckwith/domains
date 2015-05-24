@@ -2,6 +2,7 @@
  * Created by Daniel Beckwith on 5/23/2015.
  */
 ///<reference path="libs/underscore/underscore.d.ts"/>
+///<reference path="libs/d3/d3.d.ts"/>
 ///<reference path="Vector.ts"/>
 var Curve = (function () {
     function Curve(generator, length) {
@@ -60,6 +61,8 @@ var Curve = (function () {
     });
     Curve.prototype.genPts = function (forDraw) {
         return _.map(_.range(0, 1, (forDraw ? Curve.DRAW_DELTA : Curve.CALC_DELTA) / this.length).concat([1]), this.gen);
+    };
+    Curve.prototype.draw = function (svg) {
     };
     Curve.DRAW_DELTA = 2;
     Curve.CALC_DELTA = 0.5;

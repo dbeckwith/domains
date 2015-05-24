@@ -2,6 +2,7 @@
  * Created by Daniel Beckwith on 5/23/2015.
  */
 
+///<reference path="libs/d3/d3.d.ts"/>
 ///<reference path="Vector.ts"/>
 ///<reference path="Curve.ts"/>
 
@@ -27,6 +28,10 @@ class Line extends Curve {
 
     genPts(forDraw:boolean):Vector[] {
         return [this.start, this.end];
+    }
+
+    draw(svg:D3.Selection) {
+
     }
 
 }

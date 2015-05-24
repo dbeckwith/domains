@@ -7,6 +7,7 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
+///<reference path="libs/d3/d3.d.ts"/>
 ///<reference path="Vector.ts"/>
 ///<reference path="Particle.ts"/>
 var TurningParticle = (function (_super) {
@@ -23,6 +24,8 @@ var TurningParticle = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    TurningParticle.prototype.draw = function (svg) {
+    };
     TurningParticle.prototype.update = function (dt) {
         var acc = Vector.perp(this.vel, this.dir);
         acc.setMag(this.vel.magSq / 25);

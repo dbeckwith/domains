@@ -1,6 +1,7 @@
 /**
  * Created by Daniel Beckwith on 5/23/2015.
  */
+///<reference path="libs/d3/d3.d.ts"/>
 ///<reference path="Vector.ts"/>
 var Particle = (function () {
     function Particle(pos, vel) {
@@ -27,6 +28,8 @@ var Particle = (function () {
         enumerable: true,
         configurable: true
     });
+    Particle.prototype.draw = function (svg) {
+    };
     Particle.prototype.update = function (dt) {
         this.pos.add(Vector.mult(this.vel, dt));
     };

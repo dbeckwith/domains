@@ -2,6 +2,8 @@
  * Created by Daniel Beckwith on 5/24/2015.
  */
 
+///<reference path="libs/d3/d3.d.ts"/>
+///<reference path="libs/underscore/underscore.d.ts"/>
 ///<reference path="Vector.ts"/>
 ///<reference path="Curve.ts"/>
 ///<reference path="Line.ts"/>
@@ -97,6 +99,10 @@ class Domain {
         if (this.pairs[f2]) throw new Error(f2 + ' already linked');
         this.pairs[f1] = this.pairs[f2] = new CurvePair(this.faces[f1], this.faces[f2], map, this.numPairs++);
         this.checked = false;
+    }
+
+    draw(svg:D3.Selection) {
+
     }
 
 }
