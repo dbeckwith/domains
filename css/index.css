@@ -2,3 +2,8 @@
  * Created by Daniel Beckwith on 05/23/2015.
  */
 
+#domains-canvas {
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+}
